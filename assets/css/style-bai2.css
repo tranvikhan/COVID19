@@ -1,0 +1,184 @@
+*{
+    font-family: sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, #ac3642, #DA4453);
+    margin: 0px;
+}
+.box{
+    position: relative;
+    width: 85%;
+    min-height: 600px;
+    left: 8%;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 27px;
+    opacity: 0.9;
+    background: white;
+    box-shadow: 14px 14px 44px #ac3642,
+    -14px -14px 44px #ff5264;
+
+}
+.box>.left{
+    position: relative;
+    float: left;
+    height: auto;
+    width: 50%;
+    padding:40px;
+    
+}
+#btn-back {
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#btn-back:hover {
+    margin-left: 8px;
+}
+.box>.right {
+    position: relative;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+.box>.right h2{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    color: #DA4453;
+    font-size: 18px;
+    
+}
+.box>.right>img{
+    width: 90%;
+    
+}
+#dangki{
+    position: relative;
+    border-right:solid 2px #DA4453;
+    width: 100%;
+    height: auto;
+}
+#dangki table th{
+    text-align: left;
+    vertical-align: middle;   
+    font-weight: normal; 
+}
+#dangki table{
+     position: relative;
+     width: 100%;
+     border-spacing: 20px;  
+}
+input[type="file"]{
+    border: none;
+    max-width: 230px;
+    border: solid 1px #DA4453;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+input[type="submit"],input[type="reset"]{
+    background-size: 200%;
+    background:linear-gradient(to right, #ac3642, #DA4453);
+    padding: 10px 18px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+input[name="lamlai"]{
+    background: none;
+    
+    background-color: #4d3e55;
+}
+input[type="text"],input[type="password"]{
+    border: none;
+    border: solid 1px #DA4453;
+    border-radius: 20px;
+    padding: 5px 15px;
+    max-width: 230px;
+    
+}
+#dangki label{
+    margin-right: 15px;
+}
+
+
+
+input{
+    transition: 0.5s;
+}
+input:focus,
+input:hover {
+    outline: none;
+    border: solid 2px #DA4453;
+}
+select{
+    padding: 5px 15px;
+    width: 230px;
+    border:solid 1px #DA4453;  
+    text-align: center;
+    border-radius: 20px;
+}
+
+select:focus,
+select:hover {
+    outline: none;
+    border: solid 2px #DA4453;
+    ;
+}
+option:hover{
+    background-color: #DA4453;
+}
+@media only screen and (max-width: 1200px) {
+    #dangki {
+        border: none;
+    }
+    .box>.right {
+        width: 40%;
+    }
+
+    .box>.left {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 910px) {
+    .box>.right{
+        visibility: hidden;
+        width: 0%;
+    }
+    .box>.left {
+        padding:20px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body{
+        background:none;
+    }
+    .box{
+        margin-top: 0;
+        left: 1px;
+        width: 100%;
+        padding:50px 0;
+        box-shadow: none;
+        border: none;
+    }
+    .left{
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+    #dangki{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #dangki table{
+        width: 100%;
+    }
+
+}
+

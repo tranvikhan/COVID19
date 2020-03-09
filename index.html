@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>COVID-19 Trần Vi Khan</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/img/logo-200px.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--open lib animation-->
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <!----------------------------------------------------->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+        <div id="slide-bar">
+            <img id="btn-close-bar" onclick="close_bar()" src="assets/img/back_26px.png" alt="..." />
+            <div id="info">
+                <img src="assets/img/logo-200px.png" alt="avata">
+                <h2>Trần Vi Khan</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>MSSV:</th>
+                            <td>Trần Vi Khan</td>
+                        </tr>
+                        <tr>
+                            <th>Giới tính:</th>
+                            <td>Nam</td>
+                        </tr>
+                        <tr>
+                            <th>Ngày sinh:</th>
+                            <td>06/06/1999</td>
+                        </tr>
+                        <tr>
+                            <th>Ngành học</th>
+                            <td>Kỹ thuật phần mềm</td>
+                        </tr>
+                        <tr>
+                            <th>HTML:</th>
+                            <td>
+                                <div class="skill html">90%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>CSS:</th>
+                            <td>
+                                <div class="skill css">80%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>JS:</th>
+                            <td>
+                                <div class="skill js">50%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PHP:</th>
+                            <td>
+                                <div class="skill php">30%</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contact">
+                <a href="tel:+84974184717">
+                    <img src="assets/img/whatsapp_40px.png" alt="github" />
+                </a>
+                <a href="http://facebook.com/tvkyptht">
+                    <img src="assets/img/facebook_circled_40px.png" alt="facebook"/>
+                </a>
+                <a href="mailto:tranvikhan@gmail.com">
+                    <img src="assets/img/google_plus_40px.png" alt="google"/>
+                </a>
+                <a href="https://github.com/tranvikhan">
+                    <img src="assets/img/github_40px.png" alt="github"/>
+                </a>
+            </div> 
+        </div>
+        <div class="nav-bar">
+            <a id="btn-open-bar" onclick="open_bar()">
+                <img src="assets/img/menu_32px.png" alt="="/>
+            </a>
+            <a href="#thongtin">Thông tin</a>
+            <a href="#trieuchung">Triệu chứng</a>
+            <a href="#phongtranh">Phòng tránh</a>
+            <a href="#thongke">Thống kê</a>
+            <!-- Rounded switch -->
+            <label class="switch">
+                <input type="checkbox" id="switch1">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="thongtin">
+                    <h2 data-aos="flip-up">COVID-19</h2>
+                    <p class="fadeIn animated">
+                        Virus này là một loại virus corona ARN liên kết đơn chính nghĩa. Trong khoảng đầu bùng
+                        phát
+                        dịch
+                        viêm phổi virus corona năm 2019–2020, các nhân viên nghiên cứu đã phát hiện chủng virus này sau
+                        khi
+                        tiến hành
+                        đo lường kiểm tra axit nucleic và dò tra trình tự bộ gen ở mẫu vật lấy từ người bệnh.
+                        <br /><br />
+                        Virus corona đã biết đủ gây ra cảm mạo cùng với các bệnh tật khá nghiêm trọng như Hội chứng hô
+                        hấp
+                        Trung Đông (MERS) và Hội chứng hô hấp cấp tính nghiêm trọng (SARS). Virus Corona kiểu mới là
+                        phân
+                        dạng virus của virus corona mà từ trước tới nay chưa bao giờ phát hiện ở trong cơ thể người.
+                    <span id="dots">...</span>
+                    </p>
+                    <p id="more" class="fadeInDown animated">
+                        Động vật được bán để làm thức ăn bị nghi ngờ là nơi chứa hoặc trung gian cho virus vì nhiều
+                        người
+                        nhiễm
+                        bệnh đầu tiên được xác định là công nhân tại Chợ bán buôn hải sản Hoa Nam, họ tiếp xúc nhiều hơn
+                        với
+                        động vật, ăn uống các thực phẩm từ động vật hoang dã. Một chợ bán động vật sống để làm thức ăn
+                        cũng
+                        bị
+                        đổ lỗi trong Dịch SARS vào năm 2003; những nơi như vậy được coi là một "vườn ươm" hoàn hảo cho
+                        mầm
+                        bệnh
+                        mới. Nhưng đó chỉ là giả thuyết của chính phủ Trung Quốc. Hiện giờ các nhà khoa học đang tiếp
+                        tuc
+                        tìm
+                        kiếm.
+                    </p>
+                    <button id="btn-read-more" onclick="read_more()" class="pr-btn">Xem thêm</button>
+                </div>
+            </div>
+            <div  id="trieuchung" class="row">
+                <h2 class="col-12" data-aos="flip-up">TRIỆU CHỨNG</h2>
+                <div class="col-3 single-chart" data-aos="zoom-out-up" data-aos-delay="50">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-stroke" fill="none" stroke-width="3.8" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" fill="none" stroke="#DA4453" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="90, 100"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage" text-anchor="middle" font-size="0.5em"
+                        fill="#666666">90%</text>
+                    </svg>
+                    <p>Trường hợp mắc bệnh có biểu hiện Sốt</p>
+                </div>
+                <div class="col-3 single-chart" data-aos="zoom-out-up" data-aos-delay="100">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path fill="none" class="circle-stroke" stroke-width="3.8" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" fill="none" stroke="#DA4453" stroke-width="2.8" stroke-linecap="round"
+                            stroke-dasharray="80, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage" text-anchor="middle" font-size="0.5em"
+                            fill="#666666">80%</text>
+                    </svg>
+                    <p>Trường hợp mắc bệnh có biểu hiện Ho khan</p>
+                </div>
+                <div class="col-3 single-chart" data-aos="zoom-out-up" data-aos-delay="200">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path fill="none" class="circle-stroke" stroke-width="3.8" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" fill="none" stroke="#DA4453" stroke-width="2.8" stroke-linecap="round"
+                            stroke-dasharray="25, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage" text-anchor="middle" font-size="0.5em"
+                            fill="#666666">25%</text>
+                    </svg>
+                    <p>Trường hợp mắc bệnh có biểu hiện Khó thở</p>
+                </div>
+                <div class="col-3 single-chart" data-aos="zoom-out-up" data-aos-delay="300">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path fill="none" class="circle-stroke" stroke-width="3.8" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" fill="none" stroke="#DA4453" stroke-width="2.8" stroke-linecap="round"
+                            stroke-dasharray="15, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" text-anchor="middle" font-size="0.5em" fill="#666666">15%</text>
+                    </svg>
+                    <p>Trường hợp mắc bệnh bị Suy hô hấp</p>
+                </div>
+                <div class="col-12 single-chart">
+                    <p>
+                        X-quang ngực đã tiết lộ các dấu hiệu ở cả hai Phổi. Dấu hiệu sống nhìn chung là ổn định vào thời
+                        điểm nhập viện của những bệnh nhân. Các xét nghiệm máu thường cho thấy số lượng bạch cầu
+                        thấp
+                        <i>(giảm bạch cầu và giảm bạch cầu lympho).</i>
+                    </p>
+                </div>
+            </div>
+            <div id="phongtranh" class="row">
+                <h2 class="col-12" data-aos="flip-up" data-aos-delay="500">PHÒNG TRÁNH</h2>
+                <div class="col-4 tip" data-aos="fade-right" data-aos-delay="300">
+                    <img src="assets/img/s1.png" alt="...">
+                    <p>Sữ dụng khẩu trang đúng cách.</p>
+                </div>
+                <div class="col-4 tip" data-aos="fade-right" data-aos-delay="200">
+                    <img src="assets/img/s2.png" alt="...">
+                    <p>Tránh tiếp xúc gần với người bị sốt/ho.</p>
+                </div>
+                <div class="col-4 tip" data-aos="fade-right" data-aos-delay="100">
+                    <img src="assets/img/s3.png" alt="...">
+                    <p>Rữa tay thường xuyên với xà phòng, nước sạch hoặc các nước rữa tay chứa cồn.</p>
+                </div>
+                <div class="col-4 tip" data-aos="fade-left" data-aos-delay="100">
+                    <img src="assets/img/s4.png" alt="...">
+                    <p>Dùng khăn che kĩ muỗi và miệng khi hắc hơi.</p>
+                </div>
+                <div class="col-4 tip" data-aos="fade-left" data-aos-delay="200">
+                    <img src="assets/img/s5.png" alt="...">
+                    <p>Chỉ sữ dụng các loại thực phẩm đã nấu chín và đảm bảo an toàn thực phẩm.</p>
+                </div>
+                <div class="col-4 tip" data-aos="fade-left" data-aos-delay="300">
+                    <img src="assets/img/s6.png" alt="...">
+                    <p>Tránh tiếp xúc gần với những loài động vật nuôi hoặc hoang dã dù là động vật sống, bị ốm hay
+                        chết,...</p>
+                </div>
+            </div>
+            <div id="thongke" class="row">
+                <h2 class="col-12" data-aos="flip-up">THỐNG KÊ</h2>
+                <p id="time-update">...</p>
+                <div class="col-4 tk-1">
+                    <h2>CA NHIỄM</h2>
+                    <h3 data-aos="zoom-in" data-aos-delay="50">102.044</h3>
+                    <p>TĂNG <b>1.266</b> CA</p>
+                </div>
+                <div class="col-4 tk-2">
+                    <h2>TỬ VONG</h2>
+                    <h3 data-aos="zoom-in" data-aos-delay="100">3.494</h3>
+                    <p>TĂNG <b>82</b> CA</p>
+                </div>
+                <div class="col-4 tk-3">
+                    <h2>HỒI PHỤC</h2>
+                    <h3 data-aos="zoom-in" data-aos-delay="200">57.600</h3>
+                    <p>TĂNG <b>1.603</b> CA</p>
+                </div>
+                <div class="col-12" id="search">
+                    <form action="#" >
+                        <input type="text" placeholder="Nhập quốc gia"/>
+                        <input type="submit" class="pr-btn" value="Tìm kiếm"/>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <table>
+                        <tr id="tb-header"> 
+                            <th colspan="2">
+                                Quốc gia/ Vùng lãnh thổ
+                            </th>
+                            <th>
+                                Ca nhiễm
+                            </th>
+                            <th>
+                                Tử vong
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/225px-Flag_of_the_People's_Republic_of_China.svg.png" alt="..."></td>
+                            <td>Trung Quốc</td>
+                            <td>80.650</td>
+                            <td>3.070</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_South_Korea.svg.png" alt="..."></td>
+                            <td>Hàn Quốc</td>
+                            <td>6.593</td>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Iran.svg.png" alt="..."></td>
+                            <td>Iran</td>
+                            <td>4.747</td>
+                            <td>124</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Germany.svg.png" alt="..."></td>
+                            <td>ĐỨC</td>
+                            <td>670</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_France.svg.png" alt="..."></td>
+                            <td>Pháp</td>
+                            <td>653</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-4">
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                Quốc gia/ Vùng lãnh thổ
+                            </th>
+                            <th>
+                                Ca nhiễm
+                            </th>
+                            <th>
+                                Tử vong
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Japan.svg.webp" alt="...">
+                            </td>
+                            <td>Nhật Bản</td>
+                            <td>420</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Spain.svg.png" alt="..."></td>
+                            <td>Tây Ban Nha</td>
+                            <td>401</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_the_United_States.svg.webp" alt="..."></td>
+                            <td>Hoa Kì</td>
+                            <td>320</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Switzerland.svg.png" alt="..."></td>
+                            <td>Thụy Sỹ</td>
+                            <td>214</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_the_United_Kingdom.svg.webp" alt="..."></td>
+                            <td>Anh</td>
+                            <td>164</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-4">
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                Quốc gia/ Vùng lãnh thổ
+                            </th>
+                            <th>
+                                Ca nhiễm
+                            </th>
+                            <th>
+                                Tử vong
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Sweden.svg.png" alt="...">
+                            </td>
+                            <td>Thụy Điển</td>
+                            <td>137</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Singapore.svg.png" alt="..."></td>
+                            <td>Singphore</td>
+                            <td>130</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_the_Netherlands.svg.webp" alt="..."></td>
+                            <td>Hà Lan</td>
+                            <td>128</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Norway.svg.png" alt="..."></td>
+                            <td>Na Uy</td>
+                            <td>127</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/quoc_ky/120px-Flag_of_Belgium.svg.png" alt="..."></td>
+                            <td>Bỉ</td>
+                            <td>109</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <ul>
+                            <li>Buổi 1: HTML
+                                <ul>
+                                    <li>
+                                        <a href="buoi1/bai1.html" target="_blank">Bài 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="buoi1/bai2.html" target="_blank">Bài 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" target="_blank">Bài 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Buổi 2: CSS
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li>Buổi 3: PHP
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Buổi 4: JAVASCRIPT
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li>Buổi 5: AJAX
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Bài 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <p>Giáo viên hướng dẫn: Cao Hồng Ngọc</p>
+                        <p>Sinh viên thực hiện: <a onclick="open_bar()">Trần Vi Khan</a></p>
+                        <p>Nguồn thông tin: <a href="https://www.wikipedia.org/">wikipedia.org</a></p>
+                        <p>Nguồn số liệu thống kê: <a href="https://zalo.me">zalo.me</a></p>
+                        <img src="assets/img/wiki.png" alt="wikimedia">
+                        <img src="assets/img/zalo.png" alt="zalo">
+                    </div>
+                    <div class="col-12" >
+                        BẢN QUYỀN THIẾT KẾ THUỘC VỀ @TRẦN VI KHAN
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="nav-bottom">
+            <a href="#thongtin"><img src="assets/img/info_100px.png" alt="A" /></a>
+            <a href="#trieuchung"><img src="assets/img/hypertension_100px.png" alt="B" /></a>
+            <a href="#phongtranh"><img src="assets/img/protect_100px.png" alt="C" /></a>
+            <a href="#thongke"><img src="assets/img/statistics_100px.png" alt="D" /></a>
+        </div>
+        <img src="assets/img/up.png" onclick="scroll_top()" id="up-btn" alt="...">
+        <script>
+            AOS.init();
+        </script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

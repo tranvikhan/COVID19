@@ -1,0 +1,137 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;    
+}
+body{
+    position: relative;
+}
+table {
+    background-color: #f1f3f8;
+    margin-top: 9rem;
+    z-index: 0;
+    border-collapse: separate;
+    border-spacing: 1px;
+    -webkit-border-horizontal-spacing: 1px;
+    -webkit-border-vertical-spacing: 1px;
+}
+
+tr {
+    background-color: #fafafa;
+}
+td,
+th {
+    width: 11rem;
+    height: 4.5rem;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+td:hover {
+    background-color: #f1f3f8;
+}
+.nav{
+    position: fixed;
+    display: block;
+    height: auto;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 5px 5px 12px #a8a8a8;
+}
+.nav a img{
+    margin-bottom: -4rem;
+    margin-left: 1rem;
+    width: 2rem;
+    transition: 0.5s;
+}
+#pic1{
+    float: right;
+    width: 10rem;
+    margin-top: -7rem;
+}
+.nav img:hover , .nav img:focus{
+    width: 2.2rem;
+}
+.nav h2,.nav h5 {
+    text-align: center;
+    vertical-align: middle;
+    color: #34495e;
+}
+.time-activity {
+    background-color: white; 
+}
+.time-activity:hover{
+    background-color: #34495e;
+    color:white;
+}
+.fist-col:hover{
+    background-color: #f1f3f8;
+}
+.row-0 th,
+.row-0 td {
+    background-color: #34495e;
+    color: white;
+    height: 3rem;
+}
+.row-1 .fist-col{
+    border-left: solid #16a085 4px;
+    color:#16a085;
+}
+.row-1 .time-activity{
+    border-bottom: solid #16a085 2px;
+}
+
+.row-2 .fist-col {
+    border-left: solid #27ae60 4px;
+    color:#27ae60;
+}
+
+.row-2 .time-activity {
+    border-bottom: solid #27ae60 2px;
+}
+
+.row-3 .fist-col {
+    border-left: solid #3498db 4px;
+    color:#3498db;
+}
+
+.row-3 .time-activity {
+    border-bottom: solid #3498db 2px;
+}
+
+.row-4 .fist-col {
+    border-left: solid #9b59b6 4px;
+    color:#9b59b6;
+}
+
+.row-4 .time-activity {
+    border-bottom: solid #9b59b6 2px;
+}
+
+.row-5 .fist-col {
+    border-left: solid #f1c40f 4px;
+    color:#f1c40f;
+}
+
+.row-5 .time-activity {
+    border-bottom: solid #f1c40f 2px;
+}
+
+.row-6 .fist-col {
+    border-left: solid #e67e22 4px;
+    color:#e67e22;
+}
+
+.row-6 .time-activity {
+    border-bottom: solid #e67e22 2px;
+}
+
+.row-7 .fist-col {
+    border-left: solid #e74c3c 4px;
+    color:#e74c3c;
+}
+
+.row-7 .time-activity {
+    border-bottom: solid #e74c3c 2px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Buổi 1 - Bài 2</title>
+        <link rel="shortcut icon" href="../assets/img/logo-200px.png">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style-bai2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="box">
+            <div class="left">
+                <a href="../index.html" id="btn-back"><img src="../assets/img/back_26px.png" alt="..." /></a>
+                <form id="dangki" >
+                    <table>
+                        <tr>
+                            <th>Tên đăng nhập</th>
+                            <td><input type="text" name="tendangnhap" /></td>
+                        </tr>
+                        <tr>
+                            <th>Mật khẩu</th>
+                            <td><input type="password" name="matkhau" /></td>
+                        </tr>
+                        <tr>
+                            <th>Mật khẩu</th>
+                            <td><input type="password" name="re-matkhau" /></td>
+                        </tr>
+                        <tr>
+                            <th>Ảnh đại diện</th>
+                            <td><input type="file" name="anhdaidien" /></td>
+                        </tr>
+                        <tr>
+                            <th>Giới tính</th>
+                            <td>
+                                <input type="radio" id="gioitinh1" name="giotinh" value="nam" />
+                                <label for="gioitinh1">Nam</label>
+                                <input type="radio" id="gioitinh2" name="giotinh" value="nu" />
+                                <label for="gioitinh2">Nữ</label>
+                                <input type="radio" id="gioitinh3" name="giotinh" value="khac" />
+                                <label for="gioitinh3">Khác</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Nghề nghiệp</th>
+                            <td>
+                                <select name="nghenghiep">
+                                    <option value="hocsinh">Học sinh</option>
+                                    <option value="sinhvien">Sinh viên</option>
+                                    <option value="giaovien">Giáo viên</option>
+                                    <option value="khac">Khác</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Sở thích</th>
+                            <td>
+                                <input type="checkbox" id="sothich1" name="sothich[]" value="thethao" />
+                                <label for="sothich1">Thể thao</label>
+                                <input type="checkbox" id="sothich2" name="sothich[]" value="dulich" />
+                                <label for="sothich2">Du lịch</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="sothich3" name="sothich[]" value="amnhac" />
+                                <label for="sothich3">Âm nhạc</label>
+                                <input type="checkbox" id="sothich4" name="sothich[]" value="thoitrang" />
+                                <label for="sothich4">Thời trang</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="reset" value="Làm lại" name="lamlai" />
+                                <input type="submit" value="Đăng kí" name="dangki"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="right">
+                <h2>ĐĂNG KÍ</h2>
+                <img src="../assets/img/undraw_surveillance_kqll.svg" alt="..." />
+            </div>
+        </div>
+    </body>
+    
+</html>
