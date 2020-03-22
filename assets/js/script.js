@@ -63,7 +63,7 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
-
+window.matchMedia('(prefers-color-scheme: dark)').matches
 function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
