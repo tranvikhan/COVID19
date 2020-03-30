@@ -84,3 +84,14 @@ body{
     padding: 20px 0 10px 0;
     border-top: solid 2px #cccccc;
 }
+.myfooter {
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #333333;
+    text-align: center;
+    color: #aaaaaa;
+}

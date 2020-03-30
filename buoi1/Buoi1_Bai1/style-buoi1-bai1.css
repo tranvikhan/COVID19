@@ -135,3 +135,14 @@ td:hover {
 .row-7 .time-activity {
     border-bottom: solid #e74c3c 2px;
 }
+.myfooter {
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #34495e;
+    text-align: center;
+    color: #aaaaaa;
+}

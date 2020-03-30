@@ -181,4 +181,15 @@ option:hover{
     }
 
 }
+.myfooter {
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #ac3642;
+    text-align: center;
+    color: #aaaaaa;
+}
 
