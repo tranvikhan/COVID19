@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <title>Buổi 1 - Bài 2</title>
         <link rel="shortcut icon" href="../../assets/img/logo-200px.png">
-        <link rel="stylesheet" type="text/css" href="style-buoi1-bai2.css">
+        <link rel="stylesheet" type="text/css" href="style_buoi3_bai1.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="box">
             <div class="left">
                 <a href="../../index.html" id="btn-back"><img src="back_26px.png" alt="..." /></a>
-                <form id="dangki" >
+                <form id="dangki" method="POST" action="thongtin.php" >
                     <table>
                         <tr>
                             <th>Tên đăng nhập</th>
@@ -32,11 +32,11 @@
                         <tr>
                             <th>Giới tính</th>
                             <td>
-                                <input type="radio" id="gioitinh1" name="giotinh" value="nam" />
+                                <input type="radio" id="gioitinh1" name="gioitinh" value="Nam" />
                                 <label for="gioitinh1">Nam</label>
-                                <input type="radio" id="gioitinh2" name="giotinh" value="nu" />
+                                <input type="radio" id="gioitinh2" name="gioitinh" value="Nữ" />
                                 <label for="gioitinh2">Nữ</label>
-                                <input type="radio" id="gioitinh3" name="giotinh" value="khac" />
+                                <input type="radio" id="gioitinh3" name="gioitinh" value="Khác" />
                                 <label for="gioitinh3">Khác</label>
                             </td>
                         </tr>
@@ -44,27 +44,27 @@
                             <th>Nghề nghiệp</th>
                             <td>
                                 <select name="nghenghiep">
-                                    <option value="hocsinh">Học sinh</option>
-                                    <option value="sinhvien">Sinh viên</option>
-                                    <option value="giaovien">Giáo viên</option>
-                                    <option value="khac">Khác</option>
+                                    <option value="Học sinh">Học sinh</option>
+                                    <option value="Sinh viên">Sinh viên</option>
+                                    <option value="Giáo viên">Giáo viên</option>
+                                    <option value="Khác">Khác</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <th rowspan="2">Sở thích</th>
                             <td>
-                                <input type="checkbox" id="sothich1" name="sothich[]" value="thethao" />
+                                <input type="checkbox" id="sothich1" name="sothich[]" value="Thể thao" />
                                 <label for="sothich1">Thể thao</label>
-                                <input type="checkbox" id="sothich2" name="sothich[]" value="dulich" />
+                                <input type="checkbox" id="sothich2" name="sothich[]" value="Du lịch" />
                                 <label for="sothich2">Du lịch</label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="checkbox" id="sothich3" name="sothich[]" value="amnhac" />
+                                <input type="checkbox" id="sothich3" name="sothich[]" value="Âm nhạc" />
                                 <label for="sothich3">Âm nhạc</label>
-                                <input type="checkbox" id="sothich4" name="sothich[]" value="thoitrang" />
+                                <input type="checkbox" id="sothich4" name="sothich[]" value="Thời trang" />
                                 <label for="sothich4">Thời trang</label>
                             </td>
                         </tr>
