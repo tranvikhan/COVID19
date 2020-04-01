@@ -1,5 +1,4 @@
 <?php
-
     $tendangnhap = $_POST['tendangnhap'];
     $matkhau = $_POST['matkhau'];
     $matkhau2 = $_POST['re-matkhau'];
@@ -12,8 +11,9 @@
         }
     }
     $sothich = substr($sothich,0,strlen($sothich)-2);
+    $duongdan="./avatar/" . $_FILES['anhdaidien']['name'];
 
-
+    //SQL
     $servername = "localhost";
     $database = "buoi3";
     $username = "root";
@@ -25,8 +25,10 @@
         die("Lỗi kết nôi: " . mysqli_connect_error());
     }
     $con ->set_charset("utf8");
-    if( $con->query("INSERT INTO thanhvien(tendangnhap,matkhau,gioitinh,nghenghiep,sothich) VALUES('$tendangnhap','$matkhau','$gioitinh','$nghenghiep','$sothich')"))
-    echo "Đăng kí thành công";
-    $con->close();  
-
+    if( $con->query("INSERT INTO thanhvien(tendangnhap,matkhau,hinhanh,gioitinh,nghenghiep,sothich) VALUES('$tendangnhap','$matkhau','$duongdan','$gioitinh','$nghenghiep','$sothich')")){
+        move_uploaded_file($_FILES['anhdaidien']['tmp_name'],$duongdan);
+        echo "đăng kí thành công!";
+    }
+    $con->close();
+    
 ?>
