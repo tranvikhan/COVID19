@@ -7,11 +7,12 @@ body{
     background: linear-gradient(to right, #ac3642, #DA4453);
     margin: 0px;
 }
-.box{
+.box, .thongtin{
     position: relative;
     width: 85%;
     min-height: 600px;
-    left: 8%;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 30px;
     padding: 20px 30px;
     border-radius: 27px;
@@ -21,7 +22,7 @@ body{
     -14px -14px 44px #ff5264;
 
 }
-.box>.left{
+.left {
     position: relative;
     float: left;
     height: auto;
@@ -38,22 +39,21 @@ body{
 #btn-back:hover {
     margin-left: 8px;
 }
-.box>.right {
+.right {
     position: relative;
     float: right;
     width: 50%;
     text-align: center;
 }
-.box>.right h2{
+.right h2 {
     margin-top: 70px;
     margin-bottom: 30px;
     color: #DA4453;
     font-size: 18px;
     
 }
-.box>.right>img{
-    width: 90%;
-    
+.right>img{
+    width: 90%;   
 }
 #dangki{
     position: relative;
@@ -127,7 +127,6 @@ select:focus,
 select:hover {
     outline: none;
     border: solid 1px #4d3e55;
-    ;
 }
 option:hover{
     background-color: #DA4453;
@@ -136,20 +135,20 @@ option:hover{
     #dangki {
         border: none;
     }
-    .box>.right {
+    .right {
         width: 40%;
     }
 
-    .box>.left {
+    .left {
         width: 60%;
     }
 }
 @media only screen and (max-width: 910px) {
-    .box>.right{
+    .right{
         visibility: hidden;
         width: 0%;
     }
-    .box>.left {
+    .left {
         padding:20px;
         width: 100%;
     }
@@ -158,9 +157,9 @@ option:hover{
     body{
         background:none;
     }
-    .box{
+    .box,
+    .thongtin{
         margin-top: 0;
-        left: 1px;
         width: 100%;
         padding:50px 0;
         box-shadow: none;
@@ -191,5 +190,48 @@ option:hover{
     background-color: #ac3642;
     text-align: center;
     color: #aaaaaa;
+}
+.thongtin{
+    width: 500px;
+    text-align: center;
+    padding: 50px 80px;
+}
+.thongtin h2{
+    color: #DA4453;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.thongtin img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.thongtin table th{
+    width: 50%;
+    font-weight: 600;
+}
+.thongtin table{
+    text-align: left;
+    width: 100%;
+    padding: 0px 20px;
+    border-spacing: 8px;
+    color: #331313;
+    margin-bottom: 40px;
+}
+.prm-btn{
+    background-color: transparent;
+    border: none;
+    padding: 8px 15px;
+    border: solid 2px #DA4453;
+    border-radius: 30px;
+    color: #DA4453;
+    cursor: pointer;
+    outline: none;
+}
+.prm-btn:hover{
+    background-color: #DA4453;
+    color: #ffffff;
 }
 
