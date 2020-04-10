@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="utf-8">
-        <title>Buổi 1 - Bài 2</title>
+        <title>Buổi 3 - Bài 1 Đăng Kí</title>
         <link rel="shortcut icon" href="../../assets/img/logo-200px.png">
         <link rel="stylesheet" type="text/css" href="style_buoi3_bai1.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,8 @@
         <div class="box">
             <div class="left">
                 <a href="../../index.html" id="btn-back"><img src="back_26px.png" alt="..." /></a>
-                <form id="dangki" method="POST" action="thongtin.php" enctype="multipart/form-data">
+                <form id="dangki" method="POST" action="thongtin.php" enctype="multipart/form-data"
+                    onsubmit="return validateForm()">
                     <table>
                         <tr>
                             <th>Tên đăng nhập</th>
@@ -22,7 +23,7 @@
                             <td><input type="password" name="matkhau" /></td>
                         </tr>
                         <tr>
-                            <th>Mật khẩu</th>
+                            <th>Nhập lại mật khẩu</th>
                             <td><input type="password" name="re-matkhau" /></td>
                         </tr>
                         <tr>
@@ -32,7 +33,7 @@
                         <tr>
                             <th>Giới tính</th>
                             <td>
-                                <input type="radio" id="gioitinh1" name="gioitinh" value="Nam" />
+                                <input type="radio" id="gioitinh1" name="gioitinh" value="Nam" checked/>
                                 <label for="gioitinh1">Nam</label>
                                 <input type="radio" id="gioitinh2" name="gioitinh" value="Nữ" />
                                 <label for="gioitinh2">Nữ</label>
@@ -71,7 +72,7 @@
                         <tr>
                             <th></th>
                             <td>
-                                <input type="reset" value="Làm lại" name="lamlai" />
+                                <input type="reset" value="Làm lại" name="lamlai" onclick="resetAvatar()"/>
                                 <input type="submit" value="Đăng kí" name="dangki"/>
                             </td>
                         </tr>
@@ -80,7 +81,7 @@
             </div>
             <div class="right">
                 <h2>ĐĂNG KÍ</h2>
-                <img src="undraw_surveillance_kqll.svg" alt="..." />
+                <img src="undraw_surveillance_kqll.svg" alt="..." id="avatar_preview" />
             </div>
         </div>
         <div class="myfooter">
@@ -88,5 +89,5 @@
             <p>Lập trình web nhóm chiều 6</p>
         </div>
     </body>
-    
+    <script type="text/Javascript" src="script.js"></script>
 </html>

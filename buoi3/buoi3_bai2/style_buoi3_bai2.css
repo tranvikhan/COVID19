@@ -1,17 +1,21 @@
-*{
+* {
     font-family: sans-serif;
     font-size: 15px;
     box-sizing: border-box;
 }
-html{
+
+html {
     overflow-x: hidden;
 }
-body{
+
+body {
     background: linear-gradient(to right, #ac3642, #DA4453);
     margin: 0px;
-    
+
 }
-.box, .thongtin{
+
+.box,
+.thongtin {
     position: relative;
     width: 85%;
     min-height: 600px;
@@ -23,123 +27,168 @@ body{
     opacity: 0.9;
     background: white;
     box-shadow: 14px 14px 44px #ac3642,
-    -14px -14px 44px #ff5264;
+        -14px -14px 44px #ff5264;
 
+}
+.box{
+    height: auto;
+    padding: 30px;
 }
 .left {
     position: relative;
     float: left;
     height: auto;
-    width: 50%;
-    padding:40px;
-    
-}
-#btn-back {
-    margin-left: 15px;
-    cursor: pointer;
-    transition: 0.5s;
-}
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-right: solid 2px #DA4453;
 
-#btn-back:hover {
-    margin-left: 8px;
+}
+.left h2,
+.right h2{
+    color: #DA4453;
+    margin-top: 0;
+    font-size: 18px;
+}
+.left>img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+.left table{
+    text-align: left;
+    width: 100%;
+}
+.left table th,
+.left table td{
+    width: 50%;
+    padding: 5px 0;
+}
+.btn-style1{
+    position: relative;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    display: inline-block;
+    margin: 10px 0;
+    float: left;
+    padding: 10px 15px 10px 35px;
+    border-radius: 30px;
+    background-color: #e2e2e2;
+    color: #DA4453;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.center{
+    float: none;
+    margin-top: 40px;
+}
+.btn-style1:hover{
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.btn-style1 img{
+    position: absolute;
+    top:3px;
+    left: 3px;
 }
 .right {
     position: relative;
     float: right;
-    width: 50%;
+    width: 70%;
+    padding: 20px;
     text-align: center;
 }
-.right h2 {
-    margin-top: 70px;
-    margin-bottom: 30px;
-    color: #DA4453;
-    font-size: 18px;
-    
-}
-.right>img{
-    max-width: 90%;
-    max-height: 370px;
-}
-#dangki{
-    position: relative;
-    border-right:solid 2px #DA4453;
+.right table{
     width: 100%;
-    height: auto;
+    border-collapse: collapse;
 }
-#dangki table th{
-    text-align: left;
-    vertical-align: middle;   
-    font-weight: normal; 
+.right table td,
+.right table th{
+    padding: 7px 5px;
 }
-#dangki table{
-     position: relative;
-     width: 100%;
-     border-spacing: 20px;  
+.right table a{
+    color: #DA4453;
 }
-input[type="file"]{
+.right table thead tr{
+    background-color: #DA4453;
+    color: #ffffff;
+}
+.right table tbody tr:hover,
+.right table tbody tr:nth-child(even):hover{
+    background-color: #fac8c8;
+}
+.right table tbody tr:nth-child(even){
+    background-color: #e2e2e2;
+}
+input[type="file"] {
     border: none;
     max-width: 230px;
     border: solid 1px #DA4453;
     border-radius: 20px;
     padding: 5px 15px;
 }
-input[type="submit"],input[type="reset"]{
+
+input[type="submit"],
+input[type="reset"] {
     background-size: 200%;
-    background:linear-gradient(to right, #ac3642, #DA4453);
+    background: linear-gradient(to right, #ac3642, #DA4453);
     padding: 10px 18px;
     color: white;
-    border: none;
+    border: solid 1px #DA4453;
     border-radius: 25px;
     margin-right: 10px;
     margin-left: 10px;
+    cursor: pointer;
 }
-input[name="lamlai"]{
+
+input[name="lamlai"] {
     background: none;
-    
+
     background-color: #4d3e55;
 }
-input[type="text"],input[type="password"]{
+
+input[type="text"],
+input[type="password"] {
     border: none;
     border: solid 1px #DA4453;
     border-radius: 20px;
     padding: 5px 15px;
     max-width: 230px;
-    
+
 }
-#dangki label{
-    margin-right: 15px;
+input {
+    transition: 0.3s;
 }
 
-
-
-input{
-    transition: 0.5s;
-}
 input:focus,
 input:hover {
     outline: none;
     border: solid 1px #4d3e55;
 }
-select{
+select {
     padding: 5px 15px;
     width: 230px;
-    border:solid 1px #DA4453;  
+    border: solid 1px #DA4453;
     text-align: center;
     border-radius: 20px;
 }
-
 select:focus,
 select:hover {
     outline: none;
     border: solid 1px #4d3e55;
 }
-option:hover{
+option:hover {
     background-color: #DA4453;
 }
+
 @media only screen and (max-width: 1200px) {
     #dangki {
         border: none;
     }
+
     .right {
         width: 40%;
     }
@@ -148,43 +197,26 @@ option:hover{
         width: 60%;
     }
 }
-@media only screen and (max-width: 910px) {
-    .right{
-        visibility: hidden;
-        width: 0%;
+@media only screen and (max-width: 768px) {
+    body {
+        background: none;
     }
-    .left {
-        padding:20px;
+    .left{
         width: 100%;
     }
-}
-@media only screen and (max-width: 768px) {
-    body{
-        background:none;
+    .right{
+        width: 100%;
     }
     .box,
-    .thongtin{
+    .thongtin {
         margin-top: 0;
         width: 100%;
-        padding:50px 0;
+        padding: 50px 0;
         box-shadow: none;
         border: none;
     }
-    .left{
-        margin: 0;
-        width: 100%;
-        padding: 0;
-    }
-    #dangki{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    #dangki table{
-        width: 100%;
-    }
-
 }
+
 .myfooter {
     margin-top: 20px;
     position: relative;
@@ -205,38 +237,28 @@ option:hover{
     color: #DA4453;
     text-align: center;
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .thongtin img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .thongtin table th{
     width: 50%;
     font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 .thongtin table{
     text-align: left;
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 40px;
     border-spacing: 8px;
     color: #331313;
     margin-bottom: 40px;
 }
-.prm-btn{
-    background-color: transparent;
-    border: none;
-    padding: 8px 15px;
-    border: solid 2px #DA4453;
-    border-radius: 30px;
+.thongtin a{
     color: #DA4453;
-    cursor: pointer;
-    outline: none;
 }
-.prm-btn:hover{
-    background-color: #DA4453;
-    color: #ffffff;
-}
-
