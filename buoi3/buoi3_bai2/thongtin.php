@@ -13,8 +13,9 @@
             $q = "SELECT * FROM thanhvien WHERE '$tendangnhap' = tendangnhap AND '$matkhau' = matkhau";
             $result = $con->query($q);
             if($result->num_rows>0){
-                setcookie("user","",time()-3600,"/");
-                setcookie("user",$tendangnhap,time()+3600,"/");
+                
+                setcookie("user", "", time(), "/");
+                setcookie("user",$tendangnhap,time() + (86400 * 30),"/");
                 $con->close();
                 header("Location: thongtin.php");
                 die();

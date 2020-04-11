@@ -1,7 +1,7 @@
 <?php
     if(isset($_GET['dangxuat'])){
         if($_GET['dangxuat']=true){
-            setcookie("user","",time()-3600,"/");
+            setcookie("user","",time(),"/");
         }
     }
     if(isset($_COOKIE['user'])){
