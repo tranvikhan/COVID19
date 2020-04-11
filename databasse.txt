@@ -1,0 +1,4 @@
+host: localhost
+DBname: id11516255_bai3
+User: id11516255_vikhan
+Pass: d!DLE-?0Xl0KQy!B

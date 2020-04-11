@@ -1,10 +1,5 @@
 <?php
-    //SQL
-        $servername = "localhost";
-        $database = "buoi3";
-        $username = "root";
-        $password = "";
-
+    include "../databasse_config.php";
         $idsp= "";
         $tensp = "";
         $chitietsp ="";

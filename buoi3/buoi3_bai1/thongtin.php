@@ -1,6 +1,8 @@
 
 <!DOCTYPE html>
 <?php   
+
+    include "../databasse_config.php";
         $tendangnhap = $_POST['tendangnhap'];
         $matkhau = md5($_POST['matkhau']);
         $matkhau2 = $_POST['re-matkhau'];
@@ -17,13 +19,7 @@
             $duongdan="../avatar/default.png";
         }else{
             $duongdan="../avatar/" . $_FILES['anhdaidien']['name'];
-        }   
-        //SQL
-        $servername = "localhost";
-        $database = "buoi3";
-        $username = "root";
-        $password = "";
-    
+        }       
         $con = new mysqli($servername, $username, $password, $database);
         
         if (!$con) {

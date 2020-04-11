@@ -1,4 +1,5 @@
 <?php
+    include "../databasse_config.php";
     function check(){
         if(!isset($_COOKIE['user'])){
         header("Location: ../buoi3_bai2/dangnhap.php");
@@ -7,11 +8,6 @@
     }
     check();
     if(isset($_GET['xoa'])){
-         //SQL
-        $servername = "localhost";
-        $database = "buoi3";
-        $username = "root";
-        $password = "";
         $con = new mysqli($servername, $username, $password, $database);
             if (!$con) {
                 die("Lỗi kết nôi: " . mysqli_connect_error());

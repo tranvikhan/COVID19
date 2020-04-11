@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <?php 
-    //SQL
-        $servername = "localhost";
-        $database = "buoi3";
-        $username = "root";
-        $password = "";
+    include "../databasse_config.php";
         if(isset($_POST['tendangnhap'])){
             $con = new mysqli($servername, $username, $password, $database);
             if (!$con) {
