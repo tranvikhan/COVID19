@@ -1,7 +1,8 @@
 <?php
     include "../databasse_config.php";
+    session_start();
     function check(){
-        if(!isset($_COOKIE['user'])){
+        if(!isset($_SESSION['user'])){
         header("Location: ../buoi3_bai2/dangnhap.php");
         die();
     }
@@ -14,7 +15,7 @@
             }
         $con ->set_charset("utf8");
 
-        $q ="SELECT idtv,hinhanhsp FROM sanpham WHERE idsp='".$_GET['xoa']."' AND idtv=(SELECT id FROM thanhvien WHERE tendangnhap='".$_COOKIE['user']."')";
+        $q ="SELECT idtv,hinhanhsp FROM sanpham WHERE idsp='".$_GET['xoa']."' AND idtv=(SELECT id FROM thanhvien WHERE tendangnhap='".$_SESSION['user']."')";
         $kq= $con->query($q);
         if($kq->num_rows>0){
             $row = $kq->fetch_assoc();

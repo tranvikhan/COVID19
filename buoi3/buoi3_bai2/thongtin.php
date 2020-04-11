@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php 
     include "../databasse_config.php";
+    session_start();
         if(isset($_POST['tendangnhap'])){
             $con = new mysqli($servername, $username, $password, $database);
             if (!$con) {
@@ -14,8 +15,7 @@
             $result = $con->query($q);
             if($result->num_rows>0){
                 
-                setcookie("user", "", time(), "/");
-                setcookie("user",$tendangnhap,time() + (86400 * 30),"/");
+                $_SESSION['user']=$tendangnhap;
                 $con->close();
                 header("Location: thongtin.php");
                 die();
@@ -27,14 +27,14 @@
             }
             $con->close();
         }
-        if(isset($_COOKIE['user'])){
+        if(isset($_SESSION['user'])){
             $con = new mysqli($servername, $username, $password, $database);
             if (!$con) {
                 die("Lỗi kết nôi: " . mysqli_connect_error());
             }
             $con ->set_charset("utf8");
 
-            $q = "SELECT * FROM thanhvien WHERE '".$_COOKIE['user']."' = tendangnhap";
+            $q = "SELECT * FROM thanhvien WHERE '".$_SESSION['user']."' = tendangnhap";
             $result = $con->query($q);
             while($row = $result ->fetch_assoc()){
                 $tendangnhap = $row['tendangnhap'];
@@ -116,7 +116,7 @@
                                 }
                             $con ->set_charset("utf8");
 
-                            $q ="SELECT * FROM sanpham WHERE idtv= (SELECT id FROM thanhvien WHERE tendangnhap='".$_COOKIE['user']."')";
+                            $q ="SELECT * FROM sanpham WHERE idtv= (SELECT id FROM thanhvien WHERE tendangnhap='".$_SESSION['user']."')";
                             $kq= $con->query($q);
                             $stt=0;
                             while ($row = $kq->fetch_assoc()) {

@@ -1,10 +1,11 @@
 <?php
+    session_start();
     if(isset($_GET['dangxuat'])){
         if($_GET['dangxuat']=true){
-            setcookie("user","",time(),"/");
+            session_destroy();
         }
     }
-    if(isset($_COOKIE['user'])){
+    if(isset($_SESSION['user'])){
         header("Location: thongtin.php");
         die();
     }

@@ -5,11 +5,12 @@
         $chitietsp ="";
         $giasp ="";
         $anhsp = "";
+    session_start();
     function check(){
-        if(!isset($_COOKIE['user'])){
+        if(!isset($_SESSION['user'])){
         header("Location: ../buoi3_bai2/dangnhap.php");
         die();
-        }
+    }
     }
     check();
     if(isset($_POST['tensp'])){
@@ -19,20 +20,20 @@
             }
         $con ->set_charset("utf8");
 
-        $q="UPDATE sanpham SET tensp= '".$_POST['tensp']."' WHERE idsp ='".$_COOKIE['idsua']."' AND tensp<>'".$_POST['tensp']."'";
+        $q="UPDATE sanpham SET tensp= '".$_POST['tensp']."' WHERE idsp ='".$_SESSION['sua']."' AND tensp<>'".$_POST['tensp']."'";
         $con->query($q);
-        $q="UPDATE sanpham SET chitietsp= '".$_POST['chitietsp']."' WHERE idsp ='".$_COOKIE['idsua']."' AND chitietsp<>'".$_POST['chitietsp']."'";
+        $q="UPDATE sanpham SET chitietsp= '".$_POST['chitietsp']."' WHERE idsp ='".$_SESSION['sua']."' AND chitietsp<>'".$_POST['chitietsp']."'";
         $con->query($q);
-        $q="UPDATE sanpham SET giasp= '".$_POST['giasp']."' WHERE idsp ='".$_COOKIE['idsua']."' AND giasp<>'".$_POST['giasp']."'";
+        $q="UPDATE sanpham SET giasp= '".$_POST['giasp']."' WHERE idsp ='".$_SESSION['sua']."' AND giasp<>'".$_POST['giasp']."'";
         $con->query($q);
         if($_FILES['anhsp']['name']!=""){
-            $q ="SELECT hinhanhsp FROM sanpham WHERE idsp='".$_COOKIE['idsua']."'";
+            $q ="SELECT hinhanhsp FROM sanpham WHERE idsp='".$_SESSION['sua']."'";
             $kq= $con->query($q);
             $row = $kq->fetch_assoc();
             $anhspXoa = $row['hinhanhsp'];
             unlink($anhspXoa);
             $duongdan="../sanpham/" . $_FILES['anhsp']['name'];
-            $q="UPDATE sanpham SET hinhanhsp= '".$duongdan."' WHERE idsp ='".$_COOKIE['idsua']."'";
+            $q="UPDATE sanpham SET hinhanhsp= '".$duongdan."' WHERE idsp ='".$_SESSION['sua']."'";
             $con->query($q);
             move_uploaded_file($_FILES['anhsp']['tmp_name'],$duongdan);   
         }
@@ -41,15 +42,14 @@
         die();
     }
     if(isset($_GET['sua'])){
-        setcookie("idsua","",time()-3000); 
-        setcookie("idsua",$_GET['sua'],time()+3000);    
+        $_SESSION['sua']=  $_GET['sua'];
         $con = new mysqli($servername, $username, $password, $database);
             if (!$con) {
                 die("Lỗi kết nôi: " . mysqli_connect_error());
             }
         $con ->set_charset("utf8");
 
-        $q ="SELECT * FROM sanpham WHERE idsp='".$_GET['sua']."' AND idtv=(SELECT id FROM thanhvien WHERE tendangnhap='".$_COOKIE['user']."')";
+        $q ="SELECT * FROM sanpham WHERE idsp='".$_GET['sua']."' AND idtv=(SELECT id FROM thanhvien WHERE tendangnhap='".$_SESSION['user']."')";
         $kq= $con->query($q);
         if($kq->num_rows>0){
             $row = $kq->fetch_assoc();

@@ -1,7 +1,8 @@
 <?php
 include "../databasse_config.php";
+    session_start();
     function check(){
-        if(!isset($_COOKIE['user'])){
+        if(!isset($_SESSION['user'])){
         header("Location: ../buoi3_bai2/dangnhap.php");
         die();
     }
@@ -19,7 +20,7 @@ include "../databasse_config.php";
         $giasp=$_POST['giasp'];
         $duongdan="../sanpham/" . $_FILES['anhsp']['name'];
     
-        $q ="INSERT INTO sanpham(tensp,chitietsp,giasp,hinhanhsp,idtv) VALUES('$tensp','".$chitietsp."','$giasp','$duongdan',(SELECT id FROM thanhvien WHERE tendangnhap='".$_COOKIE['user']."'))";
+        $q ="INSERT INTO sanpham(tensp,chitietsp,giasp,hinhanhsp,idtv) VALUES('$tensp','".$chitietsp."','$giasp','$duongdan',(SELECT id FROM thanhvien WHERE tendangnhap='".$_SESSION['user']."'))";
         if($con->query($q)){
             $con->close();
             move_uploaded_file($_FILES['anhsp']['tmp_name'],$duongdan);
