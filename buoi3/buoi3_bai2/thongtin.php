@@ -5,29 +5,38 @@
         $database = "buoi3";
         $username = "root";
         $password = "";
-        $con = new mysqli($servername, $username, $password, $database);
+        if(isset($_POST['tendangnhap'])){
+            $con = new mysqli($servername, $username, $password, $database);
             if (!$con) {
                 die("Lỗi kết nôi: " . mysqli_connect_error());
             }
-        $con ->set_charset("utf8");
-        if(isset($_POST['tendangnhap'])){
+            $con ->set_charset("utf8");
+
             $tendangnhap = $_POST['tendangnhap'];
             $matkhau = md5($_POST['matkhau']);
             $q = "SELECT * FROM thanhvien WHERE '$tendangnhap' = tendangnhap AND '$matkhau' = matkhau";
             $result = $con->query($q);
             if($result->num_rows>0){
-                setcookie("user","",time()-3600);
-                setcookie("user",$tendangnhap,time()+3600);
+                setcookie("user","",time()-3600,"/");
+                setcookie("user",$tendangnhap,time()+3600,"/");
+                $con->close();
                 header("Location: thongtin.php");
                 die();
-                $con->close();
+               
             }else{
-                header("Location: dangnhap.php?thatbai=true");
                 $con->close();
+                header("Location: dangnhap.php?thatbai=true");
                 die();
             }
+            $con->close();
         }
         if(isset($_COOKIE['user'])){
+            $con = new mysqli($servername, $username, $password, $database);
+            if (!$con) {
+                die("Lỗi kết nôi: " . mysqli_connect_error());
+            }
+            $con ->set_charset("utf8");
+
             $q = "SELECT * FROM thanhvien WHERE '".$_COOKIE['user']."' = tendangnhap";
             $result = $con->query($q);
             while($row = $result ->fetch_assoc()){
@@ -37,14 +46,11 @@
                 $sothich =$row['sothich'];
                 $hinhanh =$row['hinhanh'];
             }
-            
+            $con->close();
         }else{
             header("Location: dangnhap.php");
             die();
-            $con->close();
-        }
-        $con->close();
-        
+        }     
 ?>
 <html lang="vi">
 <head>
@@ -84,7 +90,7 @@
         </div>
         <div class="right">
             <h2>Danh sách sản phẩm</h2>
-            <a href="#" class="btn-style1">
+            <a href="../buoi3_bai3/themsanpham.php" class="btn-style1">
                 <img src="add_30px.png">
                 Thêm sản phẩm</a>
             <table>
@@ -105,22 +111,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Iphone X</td>
-                        <td>20000000 (VND)</td>
-                        <td><a href="#">Xem chi tiết</a></td>
-                        <td><a href="#"><img src="edit_50px.png"></a></td>
-                        <td><a href="#"><img src="delete_bin_30px.png"></a></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Iphone X</td>
-                        <td>20000000 (VND)</td>
-                        <td><a href="#">Xem chi tiết</a></td>
-                        <td><a href="#"><img src="edit_50px.png"></a></td>
-                        <td><a href="#"><img src="delete_bin_30px.png"></a></td>
-                    </tr>
+                        <?php
+                            //SQL
+                            $con = new mysqli($servername, $username, $password, $database);
+                                if (!$con) {
+                                    die("Lỗi kết nôi: " . mysqli_connect_error());
+                                }
+                            $con ->set_charset("utf8");
+
+                            $q ="SELECT * FROM sanpham WHERE idtv= (SELECT id FROM thanhvien WHERE tendangnhap='".$_COOKIE['user']."')";
+                            $kq= $con->query($q);
+                            $stt=0;
+                            while ($row = $kq->fetch_assoc()) {
+                                $stt++;
+                                echo("<tr>");
+                                    echo("<td>".$stt."</td>");
+                                    echo("<td>".$row['tensp']."</td>");
+                                    echo("<td>".$row['giasp']."(VND) </td>");
+                                    echo('<td><a href="../buoi3_bai4/xemsanpham.php?xem='.$row['idsp'].'">Xem chi tiết</a></td>');
+                                    echo('<td><a href="../buoi3_bai3/suasanpham.php?sua='.$row['idsp'].'"><img src="edit_50px.png"></a></td>');
+                                    echo('<td><a href="../buoi3_bai3/xoasanpham.php?xoa='.$row['idsp'].'"><img src="delete_bin_30px.png"></a></td>');
+                                echo("</tr>");
+                            }
+                        ?>
                 </tbody>
             </table>
         </div>

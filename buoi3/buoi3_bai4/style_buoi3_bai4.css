@@ -1,0 +1,121 @@
+* {
+    font-family: sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(to right, #ac3642, #DA4453);
+    margin: 0px;
+
+}
+.box::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.box{
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 27px;
+    opacity: 0.9;
+    background: white;
+    box-shadow: 14px 14px 44px #ac3642,
+        -14px -14px 44px #ff5264;
+
+}
+.left {
+    position: relative;
+    float: left;
+    height: auto;
+    width: 50%;
+    padding: 20px;
+    padding-top: 50px;
+    text-align: center;
+
+}
+.btn-style1{
+    position: absolute;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    top: -10px;
+    left: -10px;
+    padding: 10px 15px 10px 35px;
+    border-radius: 30px;
+    background-color: #e2e2e2;
+    color: #DA4453;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.btn-style1:hover{
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.btn-style1 img{
+    position: absolute;
+    top:3px;
+    left: 3px;
+}
+.right {
+    position: relative;
+    float: right;
+    width: 50%;
+    padding: 20px;
+}
+.right h1{
+    font-size: 30px;
+    display: block;
+    margin-top: 60px;
+    color: #110102;
+}
+.right h2{
+    display: block;
+    color: #110102;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.right h2 span{
+    color: #DA4453;
+    font-size: 18px;
+}
+.right h3{
+    color: #110102;
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background: none;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .box {
+        margin-top: 0;
+        width: 100%;
+        padding: 50px 20px;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.myfooter {
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #ac3642;
+    text-align: center;
+    color: #aaaaaa;
+}

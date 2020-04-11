@@ -30,6 +30,11 @@ body {
         -14px -14px 44px #ff5264;
 
 }
+.box::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 .box{
     height: auto;
     padding: 30px;

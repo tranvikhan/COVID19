@@ -26,11 +26,6 @@ body{
     -14px -14px 44px #ff5264;
 
 }
-.box::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 .left {
     position: relative;
     float: left;
@@ -93,35 +88,39 @@ input[type="submit"],input[type="reset"]{
     background:linear-gradient(to right, #ac3642, #DA4453);
     padding: 10px 18px;
     color: white;
-    border: none;
+    border: solid 1px #DA4453;
     border-radius: 25px;
     margin-right: 10px;
     margin-left: 10px;
+    cursor: pointer;
 }
 input[name="lamlai"]{
     background: none;
     
     background-color: #4d3e55;
 }
-input[type="text"],input[type="password"]{
+input[type="text"],input[type="password"],textarea{
     border: none;
+    outline: none;
     border: solid 1px #DA4453;
     border-radius: 20px;
     padding: 5px 15px;
-    max-width: 230px;
+    width: 100%;
     
+}
+textarea{
+    border-radius: 10px;
 }
 #dangki label{
     margin-right: 15px;
 }
-
-
-
 input{
-    transition: 0.5s;
+    transition: 0.3s;
 }
 input:focus,
-input:hover {
+input:hover,
+textarea:hover,
+textarea:focus {
     outline: none;
     border: solid 1px #4d3e55;
 }
@@ -180,6 +179,9 @@ option:hover{
         width: 100%;
         padding: 0;
     }
+    .btn-style1{
+        margin-left: 50px;
+    }
     #dangki{
         margin: 0;
         padding: 0;
@@ -202,15 +204,16 @@ option:hover{
     color: #aaaaaa;
 }
 .thongtin{
-    width: 500px;
+    width: 600px;
     text-align: center;
-    padding: 50px 80px;
+    padding: 50px 50px;
 }
 .thongtin h2{
     color: #DA4453;
     text-align: center;
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-top:50px;
+    margin-bottom: 30px;
 }
 .thongtin img{
     width: 150px;
@@ -219,7 +222,7 @@ option:hover{
     margin-bottom: 30px;
 }
 .thongtin table th{
-    width: 50%;
+    width: 45%;
     font-weight: 600;
 }
 .thongtin table{
@@ -228,7 +231,10 @@ option:hover{
     padding: 0px 20px;
     border-spacing: 8px;
     color: #331313;
-    margin-bottom: 40px;
+}
+.thongtin input[type="submit"]:hover,
+.thongtin input[type="reset"]:hover{
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 .prm-btn{
     background-color: transparent;
@@ -244,4 +250,35 @@ option:hover{
     background-color: #DA4453;
     color: #ffffff;
 }
-
+#imgPreview{
+    border-radius: 10px;
+    float: right;
+    height: auto;
+    width: 200px;
+    margin-right: 20px;
+}
+.btn-style1 {
+    position: absolute;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px 10px 35px;
+    border-radius: 30px;
+    background-color: #e2e2e2;
+    color: #DA4453;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.btn-style1 img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.btn-style1:hover {
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}

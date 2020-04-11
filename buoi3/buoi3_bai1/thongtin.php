@@ -13,7 +13,6 @@
             }
             $sothich = substr($sothich,0,strlen($sothich)-2);
         }
-        $duongdan ="khan";
         if($_FILES['anhdaidien']['name']==""){
             $duongdan="../avatar/default.png";
         }else{
