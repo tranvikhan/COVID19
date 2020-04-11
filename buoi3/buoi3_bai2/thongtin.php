@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
     include "../databasse_config.php";
     session_start();
@@ -17,15 +16,14 @@
                 
                 $_SESSION['user']=$tendangnhap;
                 $con->close();
-                header("Location: thongtin.php");
+                header("location: thongtin.php");
                 die();
                
             }else{
                 $con->close();
-                header("Location: dangnhap.php?thatbai=true");
+                header("location: dangnhap.php?thatbai=true");
                 die();
             }
-            $con->close();
         }
         if(isset($_SESSION['user'])){
             $con = new mysqli($servername, $username, $password, $database);
@@ -49,6 +47,7 @@
             die();
         }     
 ?>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8">

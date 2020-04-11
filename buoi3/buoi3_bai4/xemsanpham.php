@@ -40,7 +40,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>iphone</title>
+    <title><?php echo($tensp);?></title>
     <link rel="shortcut icon" href="logo-200px.png">
     <link rel="stylesheet" type="text/css" href="style_buoi3_bai4.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
