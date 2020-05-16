@@ -89,6 +89,9 @@
             <a href="../buoi3_bai3/themsanpham.php" class="btn-style1">
                 <img src="add_30px.png">
                 Thêm sản phẩm</a>
+            <a href="../../buoi4/buoi4_bai4.php" class="btn-style1">
+            <img src="unsplash_50px.png">
+            Xem ảnh sản phẩm (Buổi 4/Bài 4)</a>
             <table>
                 <thead>
                     <tr>
@@ -132,6 +135,7 @@
                         ?>
                 </tbody>
             </table>
+            
         </div>
     </div>
     <div class="myfooter">
